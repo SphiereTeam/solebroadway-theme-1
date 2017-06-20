@@ -60,11 +60,15 @@
 
 	</div><!-- /.row -->
 
-	<div class="row">
-		<div class="col-sm-12 hidden-xs">
-			<?php echo do_shortcode("[metaslider id=113]"); ?>
-		</div>
-	</div><!-- /.row -->
+	<?php if ( is_active_sidebar( 'home-slider-sidebar' ) ) : ?>
+
+		<div class="row">
+			<div class="col-sm-12 hidden-xs">
+				<?php dynamic_sidebar( 'home-slider-sidebar' ); ?>
+			</div>
+		</div><!-- /.row -->
+
+	<?php endif; ?>
 
 	<?php
 
