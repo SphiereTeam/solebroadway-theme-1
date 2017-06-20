@@ -89,25 +89,37 @@ add_action( 'after_setup_theme', 'solebroadway_theme_1_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function solebroadway_theme_1_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'solebroadway-theme-1' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'solebroadway-theme-1' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
 
-	register_sidebar( array(
-		'name' => __( 'Shop Filter Sidebar', 'solebroadway_theme_1' ),
-		'id' => 'shop-filter-sidebar',
-		'description' => __( 'Widgets in this area will be shown on the shop page.', 'solebroadway_theme_1' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<p class="widget-title">',
-		'after_title'   => '</p>',
-    ) );
+	unregister_sidebar( 'sidebar-1' );
+	unregister_sidebar( 'shop-filter-sidebar' );
+	unregister_sidebar( 'home-slider-sidebar' );
+
+	//shop filter sidebar
+	$args_shop_filter_sidebar = array(
+		'id'			=> 'shop-filter-sidebar',
+		'name'			=> __( 'Shop Filter Sidebar', 'solebroadway_theme_1' ),
+		'description'	=> __( 
+								'Widgets here shows up either on the left side or on top of the shop page.',
+								'solebroadway_theme_1' 
+							),
+		'before_title'	=> '<p class="widget-title">',
+		'after_title'	=> '</p>',
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</div>',
+	);
+	register_sidebar( $args_shop_filter_sidebar );
+
+    //home page slider sidebar
+	$args_slider_sidebar = array(
+		'id'			=> 'home-slider-sidebar',
+		'name'			=> __( 'Home Slider Sidebar', 'solebroadway_theme_1' ),
+		'description'	=> __( 'Widgets here shows up on the home page under categories section.', 'solebroadway_theme_1' ),
+		'before_title'	=> '<h3 class="widget-title">',
+		'after_title'	=> '</h3>',
+		'before_widget'	=> '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+	);
+	register_sidebar( $args_slider_sidebar );
 }
 add_action( 'widgets_init', 'solebroadway_theme_1_widgets_init' );
 
