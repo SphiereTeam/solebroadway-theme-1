@@ -116,7 +116,7 @@ function solebroadway_theme_1_widgets_init() {
 		'description'	=> __( 'Widgets here shows up on the home page under categories section.', 'solebroadway_theme_1' ),
 		'before_title'	=> '<h3 class="widget-title">',
 		'after_title'	=> '</h3>',
-		'before_widget'	=> '<section id="%1$s" class="widget %2$s">',
+		'before_widget'	=> '<section id="%1$s" class="home-slider-sidebar widget %2$s">',
 		'after_widget'	=> '</section>',
 	);
 	register_sidebar( $args_slider_sidebar );
