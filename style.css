@@ -1368,8 +1368,8 @@ input#coupon_code:focus,
 
 @media screen and (min-width: 768px){
 	.navbar-not-front{
-		padding-top: 15px;
-		padding-bottom: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 }
 
