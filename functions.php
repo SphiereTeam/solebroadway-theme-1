@@ -43,8 +43,9 @@ function solebroadway_theme_1_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
+	unregister_nav_menu( 'menu-under-header' );
 	register_nav_menus( array(
-		'menu-under-header' => esc_html__( 'Menu Under Header', 'solebroadway-theme-1' ),
+		'top-menu' => esc_html__( 'Menu at the top of each page', 'solebroadway-theme-1' ),
 	) );
 
 	/*

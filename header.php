@@ -41,8 +41,8 @@
 
 			<?php
 				wp_nav_menu( array(
-					'menu'					=> 'menu-under-header',
-					'theme_location'		=> 'menu-under-header',
+					'menu'					=> 'top-page-menu',
+					'theme_location'		=> 'top-menu',
 					'depth'					=> 2,
 					'container'				=> 'div',
 					'container_class'		=> 'collapse navbar-collapse',
