@@ -1062,41 +1062,6 @@ input#coupon_code:focus,
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#main-logo {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: center;
-		justify-content: center;
-	-ms-flex-align: center;
-		align-items: center;
-}
-
-#main-logo .image{
-	background: url("images/main-logo-borderless-250.png");
-	height: 250px;
-	width: 250px;
-}
-
-@media screen and (min-width: 1440px){
-
-	#main-logo .image{
-		background: url("images/main-logo-borderless-375.png");
-		height: 375px;
-		width: 375px;
-	}
-
-}
-
-@media screen and (min-width: 1920px){
-
-	#main-logo .image{
-		background: url("images/main-logo-borderless-500.png");
-		height: 500px;
-		width: 500px;
-	}
-
-}
-
 #solebroadway-nav {
 	z-index: 999 !important;
 	background: #fff;

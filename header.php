@@ -23,28 +23,6 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'solebroadway-theme-1' ); ?></a>
 
-	<?php if( is_front_page() ) : ?>
-
-		<header id="masthead" class="site-header" role="banner">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="row">
-							<div class="col-sm-6 col-sm-offset-3">
-								<figure>
-									<a id="main-logo" href="<?php echo get_home_url(); ?>">
-										<div class="image"></div>
-									</a>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header><!-- #masthead -->
-
-	<?php endif; ?>
-
 	<nav id="solebroadway-nav" class="navbar navbar-default navbar-not-front">
 			
 		<div class="container-fluid">
