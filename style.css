@@ -532,7 +532,159 @@ input#coupon_code:focus,
 	background-color: #1a191a;
 	border: none;
 	border-radius: 0px;
+	margin-bottom: 0px;
+	padding: 0px 0px;
+	box-shadow: 0 6px 6px -6px black;
 }
+
+@media screen and (min-width: 1366px) {
+	#solebroadway-nav {
+		padding: 7.5px 0;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	#solebroadway-nav {
+		padding: 20px 0;
+	}
+}
+
+/* Start fix for nav when admin bar present */
+.solebroadway-nav-sticky {
+	top: 0px !important;
+}
+
+@media screen and (min-width: 601px) {
+	.solebroadway-nav-sticky {
+		top: 46px !important;
+	}
+}
+
+@media screen and (min-width: 783px) {
+	.solebroadway-nav-sticky {
+		top: 32px !important;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.solebroadway-nav-sticky {
+		top: 31px !important;
+	}
+}
+/* End fix for nav when admin bar present */
+
+/* Start navbar toggle for mobile */
+#solebroadway-nav .navbar-toggle {
+	border: 1px solid #777;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+#solebroadway-nav .navbar-toggle:hover,
+#solebroadway-nav .navbar-toggle:focus {
+	border: 1px solid #5e5e5e;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+#solebroadway-nav .navbar-toggle .icon-bar {
+	background-color: #777;
+}
+
+#solebroadway-nav .navbar-toggle:hover .icon-bar,
+#solebroadway-nav .navbar-toggle:focus .icon-bar {
+	background-color: #5e5e5e;
+}
+/* End navbar toggle for mobile */
+
+#solebroadway-nav .navbar-collapse {
+	border-color: #777;
+}
+
+/* Start navbar brand */
+#solebroadway-nav a.navbar-brand {
+	font-size: 1rem;
+	color: #777;
+}
+
+@media screen and (min-width: 768px) {
+	#solebroadway-nav a.navbar-brand {
+		font-size: 1.1rem;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	#solebroadway-nav a.navbar-brand {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	#solebroadway-nav a.navbar-brand {
+		font-size: 1.5rem;
+	}
+}
+
+#solebroadway-nav a.navbar-brand:hover {
+	color: #5e5e5e;
+}
+/* End navbar brand */
+
+/* Start normal menu items */
+#menu-main-menu li a {
+	color: #777;
+	font-size: 0.9rem;
+}
+
+@media screen and (min-width: 768px) {
+	#menu-main-menu li a {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	#menu-main-menu li a {
+		font-size: 1.1rem;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	#menu-main-menu li a {
+		font-size: 1.4rem;
+	}
+}
+
+#menu-main-menu li a:hover {
+	color: #5e5e5e;
+}
+
+#menu-main-menu li.active a {
+	background-color: transparent;
+	color: #c8c8c8;
+}
+
+#menu-main-menu li.active a:hover {
+	color: #9f9f9f;
+}
+/* End normal menu items */
+
+/* Start cart plugin menu item */
+#menu-main-menu li.active a.wpmenucart-contents {
+	color: #c8c8c8;
+}
+
+#menu-main-menu li.active a.wpmenucart-contents:hover {
+	color: #9f9f9f;
+}
+
+#menu-main-menu li.active a.wpmenucart-contents.empty-wpmenucart-visible {
+	color: #777;
+}
+
+#menu-main-menu li.active a.wpmenucart-contents.empty-wpmenucart-visible:hover {
+	color: #5e5e5e;
+}
+/* End cart plugin menu item */
 
 /*--------------------------------------------------------------
 # Header

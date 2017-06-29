@@ -1,19 +1,17 @@
 jQuery(document).ready(function($){
 	
-	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
+	$("#solebroadway-nav").sticky({
+		topSpacing:0
+	});
 
-		//50
-		//32
-		if (scroll >= 32) {
-			//clearHeader, not clearheader - caps H
-			//$(".clearHeader").addClass("darkHeader");
-			$("#solebroadway-nav").sticky({topSpacing:0});
-			$( "#solebroadway-nav" ).addClass( "solebroadway-nav-sticky" );
-		}else{
-			$("#solebroadway-nav").unstick();
-			$( "#solebroadway-nav" ).removeClass( "solebroadway-nav-sticky" );
-		}
+	$('#solebroadway-nav').on('sticky-start', function() { 
+		//console.log("Sticky nav started.");
+		$( "#solebroadway-nav" ).addClass( "solebroadway-nav-sticky" );
+	});
+
+	$('#solebroadway-nav').on('sticky-end', function() {
+		//console.log("Sticky nav ended.");
+		$( "#solebroadway-nav" ).removeClass( "solebroadway-nav-sticky" );
 	});
 
 });
