@@ -687,11 +687,6 @@ input#coupon_code:focus,
 /* End cart plugin menu item */
 
 /*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumb {
@@ -804,67 +799,79 @@ input#coupon_code:focus,
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
+
+/* Start categories */
 #cat-container {
 	display: -ms-flexbox;
+	display: -webkit-box;
 	display: flex;
 	-ms-flex-pack: justify;
-		justify-content: space-between;
+		-webkit-box-pack: justify;
+	        justify-content: space-between;
 	-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 	padding: 0px;
 	margin: 20px 15px 0px 15px;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	-ms-flex-direction: column;
-		flex-direction: column;
-	font-size: 1rem;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+	        flex-direction: column;
 }
 
-@media screen and (min-width: 768px){
-	#cat-container{
-		font-size: 1.2rem;
+@media screen and (min-width: 600px) {
+	#cat-container {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		margin: 20px 15px 15px 15px;
 	}
 }
 
-@media screen and (min-width: 1440px){
-	#cat-container{
-		font-size: 1.4rem;
+@media screen and (min-width: 768px) {
+	#cat-container {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		margin: 20px 15px 0px 15px;
 	}
 }
 
-@media screen and (min-width: 1440px){
-	#cat-container{
-		font-size: 1.8rem;
-	}
-}
-
-.front-category {
+#cat-container .front-category {
 	position: relative;
 	height: 150px;
 	background: #333333;
 	-ms-flex-positive: 1;
-		flex-grow: 1;
+		-webkit-box-flex: 1;
+	        flex-grow: 1;
+    margin-bottom: 15px;
 }
 
 @media screen and (min-width: 600px){
-	#cat-container {
-		-ms-flex-direction: row;
-			flex-direction: row;
+	#cat-container .front-category {
+		height: 200px;
+		margin-bottom: 0px;
 	}
+}
 
-	.front-category {
+@media screen and (min-width: 1024px){
+	#cat-container .front-category {
+		height: 250px;
+	}
+}
+
+@media screen and (min-width: 1366px){
+	#cat-container .front-category {
 		height: 300px;
 	}
 }
 
-@media screen and (min-width: 1440px){
-	.front-category {
-		height: 400px;
-	}
-}
-
 @media screen and (min-width: 1920px){
-	.front-category {
-		height: 500px;
+	#cat-container .front-category {
+		height: 400px;
 	}
 }
 
@@ -873,11 +880,15 @@ input#coupon_code:focus,
 	width: 100%;
 	background: rgba(0, 0, 0, 0.4);
 	display: -ms-flexbox;
+	display: -webkit-box;
 	display: flex;
 	-ms-flex-pack: center;
-		justify-content: center;
+		-webkit-box-pack: center;
+	        justify-content: center;
 	-ms-flex-align: center;
-		align-items: center;
+		-webkit-box-align: center;
+	        align-items: center;
+	-webkit-transition: background 0.5s;
 	transition: background 0.5s;
 }
 
@@ -885,6 +896,60 @@ input#coupon_code:focus,
 	background-color: hsla(300, 2%, 20%, 0.85);
 	text-decoration: none;
 }
+
+#cat-container .front-btn,
+#cat-container .front-btn:focus,
+#cat-container .front-btn:active,
+#cat-container .front-btn:active:focus{
+	border: none;
+	font-size: 1rem;
+	color: #fff;
+	border-radius: 0px;
+	background: none;
+	outline: none;
+	box-shadow: none;
+}
+
+@media screen and (min-width: 600px) {
+	#cat-container .front-btn,
+	#cat-container .front-btn:focus,
+	#cat-container .front-btn:active,
+	#cat-container .front-btn:active:focus{
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	#cat-container .front-btn,
+	#cat-container .front-btn:focus,
+	#cat-container .front-btn:active,
+	#cat-container .front-btn:active:focus{
+		font-size: 1.8rem;
+	}
+}
+
+#cat-container .front-btn:hover,
+#cat-container .front-btn:active:hover{
+	background-color: hsla( 0, 0%, 0%, 0);
+	color: #fff;
+}
+
+#cat-container .front-btn:after,
+#cat-container .front-btn:focus:after,
+#cat-container .front-btn:active:after,
+#cat-container .front-btn:active:focus:after{
+	display: block;
+	content: "";
+	border-bottom: solid 1px #fff;
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+}
+
+#cat-container .front-btn:hover:after,
+#cat-container .front-btn:active:hover:after{
+	transform: scaleX(1);
+}
+/* End categories */
 
 .rslides_nav,
 .rslides_nav:active,
@@ -928,41 +993,6 @@ input#coupon_code:focus,
 
 .rslides_tabs .rslides_here a {
 	font-weight: 300 !important; 
-}
-
-.front-btn,
-.front-btn:focus,
-.front-btn:active,
-.front-btn:active:focus{
-	border: none;
-	font-size: 1em;
-	color: #fff;
-	border-radius: 0px;
-	background: none;
-	outline: none;
-	box-shadow: none;
-}
-
-.front-btn:hover,
-.front-btn:active:hover{
-	background-color: hsla( 0, 0%, 0%, 0);
-	color: #fff;
-}
-
-.front-btn:after,
-.front-btn:focus:after,
-.front-btn:active:after,
-.front-btn:active:focus:after{
-	display: block;
-	content: "";
-	border-bottom: solid 1px #fff;
-	transform: scaleX(0);
-	transition: transform 250ms ease-in-out;
-}
-
-.front-btn:hover:after,
-.front-btn:active:hover:after{
-	transform: scaleX(1);
 }
 
 .front-latest-label {
