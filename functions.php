@@ -163,17 +163,9 @@ function solebroadway_theme_1_scripts() {
 	wp_enqueue_script( 'jquery-sticky-js', get_template_directory_uri() . '/js/sticky/jquery.sticky.js', array('jquery'), '0.1', true );
 
 	if( is_admin_bar_showing() ){
-		if( is_front_page() ){
-			wp_enqueue_script( 'custom-sticky-admin-front-js', get_template_directory_uri() . '/js/sticky/custom.sticky.admin.front.js', array('jquery-sticky-js'), '0.1', true );
-		}else{
-			wp_enqueue_script( 'custom-sticky-admin-js', get_template_directory_uri() . '/js/sticky/custom.sticky.admin.js', array('jquery-sticky-js'), '0.1', true );
-		}
+		wp_enqueue_script( 'custom-sticky-admin-js', get_template_directory_uri() . '/js/sticky/custom.sticky.admin.js', array('jquery-sticky-js'), '0.1', true );
 	}else{
-		if( is_front_page() ){
-			wp_enqueue_script( 'custom-sticky-js', get_template_directory_uri() . '/js/sticky/custom.sticky.front.js', array('jquery-sticky-js'), '0.1', true );
-		}else{
-			wp_enqueue_script( 'custom-sticky-js', get_template_directory_uri() . '/js/sticky/custom.sticky.js', array('jquery-sticky-js'), '0.1', true );
-		}
+		wp_enqueue_script( 'custom-sticky-js', get_template_directory_uri() . '/js/sticky/custom.sticky.js', array('jquery-sticky-js'), '0.1', true );
 	}
 	//end sticky navbar
 

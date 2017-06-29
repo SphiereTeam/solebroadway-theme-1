@@ -1,11 +1,11 @@
 jQuery(document).ready(function($){
-	//$("#solebroadway-nav").sticky({topSpacing:0});
-	//$( "#solebroadway-nav" ).addClass( "solebroadway-nav-sticky" );
+	
 	$(window).scroll(function() {
 		var scroll = $(window).scrollTop();
 
-		//>=, not <=
-		if (scroll >= 50) {
+		//50
+		//32
+		if (scroll >= 32) {
 			//clearHeader, not clearheader - caps H
 			//$(".clearHeader").addClass("darkHeader");
 			$("#solebroadway-nav").sticky({topSpacing:0});
@@ -15,4 +15,5 @@ jQuery(document).ready(function($){
 			$( "#solebroadway-nav" ).removeClass( "solebroadway-nav-sticky" );
 		}
 	});
+
 });
