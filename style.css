@@ -951,49 +951,33 @@ input#coupon_code:focus,
 }
 /* End categories */
 
-.rslides_nav,
-.rslides_nav:active,
-.rslides_nav:focus,
-.rslides_nav:active:focus{
-	color: #fff;
-	opacity: 1 !important;
-	background-color: hsla( 300, 2%, 10%, 0.7 ) !important;
-	transition: background-color ease-out 0.3s !important;
-	font-weight: 300 !important;
-	font-size: 1rem;
-}
-
-@media screen and (min-width: 1440px){
-	.rslides_nav,
-	.rslides_nav:active,
-	.rslides_nav:focus,
-	.rslides_nav:active:focus{
-		font-size: 1.2rem;
-	}
-}
-
-@media screen and (min-width: 1920px){
-	.rslides_nav,
-	.rslides_nav:active,
-	.rslides_nav:focus,
-	.rslides_nav:active:focus{
-		font-size: 1.6rem;
-		padding: 15px !important;
-	}
-}
-
-.rslides_nav:hover {
-	color: #fff;
-	background-color: hsla( 300, 2%, 20%, 0.7 ) !important;
+/* Start slider */
+.home-slider-sidebar {
+	margin: 15px auto;
 }
 
 .rslides_tabs {
-	background: hsla(0, 0%, 25%, 1) !important;
+	background: #4d4d42 !important;
+	font-size: 1rem !important;
+}
+
+@media screen and (min-width: 1366px) {
+	.rslides_tabs {
+		font-size: 1.2rem !important;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.rslides_tabs {
+		font-size: 1.6rem !important;
+	}
 }
 
 .rslides_tabs .rslides_here a {
 	font-weight: 300 !important; 
 }
+
+/* End slider */
 
 .front-latest-label {
 	padding: 15px 0px 15px;
@@ -1175,10 +1159,6 @@ input#coupon_code:focus,
 		font-size: 1.4rem;
 	}
 
-}
-
-.home-slider-sidebar {
-	margin: 15px auto;
 }
 
 /*--------------------------------------------------------------
