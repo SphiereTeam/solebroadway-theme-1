@@ -105,18 +105,35 @@
 
 	?>
 
-	<div class="front-latest-product">
-		<div class="front-latest-product-1" style="background: url('<?php echo $latest_image_url; ?>') no-repeat center center;background-size: cover;">
-		</div>
-		<div class="front-latest-product-2">
-			<div class="front-latest-product-2a">
-				<span>Latest</span>
-				<h3><?php echo $latest_title; ?></h3>
-				<p><?php echo $latest_description; ?></p>
-				<a class="btn btn-default front-latest-product-btn" href="<?php echo $latest_permalink; ?>">View Product</a>
-			</div>
-		</div>
-	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="front-latest-product">
+				
+				<div class="front-latest-product-1">
+					<span>Latest</span>
+					<a href="<?php echo $latest_permalink; ?>">
+						<h3><?php echo $latest_title; ?></h3>
+					</a>
+					<a href="<?php echo $latest_permalink; ?>">
+						<img src="<?php echo $latest_image_url; ?>" alt="Latest Product Featured Image">
+					</a>
+
+				</div><!-- /.front-latest-product-1 -->
+				
+				<div class="front-latest-product-2">
+					<span>Latest</span>
+					<a href="<?php echo $latest_permalink; ?>">
+						<h3><?php echo $latest_title; ?></h3>
+					</a>
+					<p><?php echo $latest_description; ?></p>
+					<a class="btn btn-default sb-btn-center solebroadway-btn" href="<?php echo $latest_permalink; ?>">View Product</a>
+				</div><!-- /.front-latest-product-2 -->
+
+			</div><!-- /.front-latest-product -->
+		</div><!-- /.col-xs-12 -->
+	</div><!-- /.row -->
+
+			
 
 </div>
 

@@ -33,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Header
 # Breadcrumbs
 # Buttons
+# Links
 # Front Page
 # Shop Page
 # Single Product Page
@@ -796,6 +797,67 @@ input#coupon_code:focus,
 	color: #777;
 }
 
+/* start global buttons */
+.solebroadway-btn {
+	background: #4d4d42;
+	border: none;
+	border-radius: 0;
+	padding: 10px 15px;
+	color: #e5e5e5;
+	font-size: 0.9rem;
+	transition: background 0.25s ease-out;
+}
+
+@media screen and (min-width: 1366px) {
+	.solebroadway-btn {
+		padding: 15px 20px;
+		font-size: 1.1rem;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.solebroadway-btn {
+		padding: 20px 25px;
+		font-size: 1.5rem;
+	}
+}
+
+.solebroadway-btn:hover {
+	background: #1a191a;
+	color: #777;
+}
+
+.solebroadway-btn:active,
+.solebroadway-btn:active:hover {
+	background: #1a191a;
+	color: #c8c8c8;
+}
+
+.solebroadway-btn:focus,
+.solebroadway-btn:active:focus {
+	background: #1a191a;
+	color: #c8c8c8;
+	outline: 1px solid #c8c8c8;
+}
+/* end global buttons */
+
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+a,
+a:visited {
+	color: #804848;
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #804848;
+	text-decoration: underline;
+	outline: none;
+}
+
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
@@ -979,23 +1041,7 @@ input#coupon_code:focus,
 
 /* End slider */
 
-.front-latest-label {
-	padding: 15px 0px 15px;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: center;
-		justify-content: center;
-	-ms-flex-align: center;
-		align-items: center;
-	background: none;
-	border: none;
-}
-
-.front-latest-label h1{
-	margin: 0px;
-	color: #777;
-}
-
+/* Start latest product */
 .front-latest-product{
 	display: -ms-flexbox;
 	display: flex;
@@ -1004,162 +1050,162 @@ input#coupon_code:focus,
 	background: #ffffff;
 	-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
+	flex-direction: column;
 }
 
-.front-latest-product-1{
-	height: 350px;
-	width: 350px;
-	-ms-flex-positive: 1;
-		flex-grow: 1;
-}
-
-@media screen and (min-width: 1200px){
-	.front-latest-product-1{
-		height: 400px;
-		width: 400px;
+@media screen and (min-width: 720px) {
+	.front-latest-product {
+		flex-direction: row;
 	}
 }
 
-@media screen and (min-width: 1360px){
-	.front-latest-product-1{
-		height: 450px;
-		width: 450px;
+.front-latest-product-1 {
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+@media screen and (min-width: 1024px) {
+	.front-latest-product-1 {
+		flex-grow: 0.65;
 	}
 }
 
-@media screen and (min-width: 1600px){
-	.front-latest-product-1{
-		height: 600px;
-		width: 600px;
+@media screen and (min-width: 1366px) {
+	.front-latest-product-1 {
+		flex-grow: 0.5;
 	}
 }
 
-@media screen and (min-width: 1920px){
-	.front-latest-product-1{
-		height: 700px;
-		width: 700px;
-	}
-}
-
-.front-latest-product-2{
-	-ms-flex-positive: 1;
-		flex-grow: 1;
-	width: 350px;
-	padding: 25px;
-}
-
-.front-latest-product-2a{
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: center;
-		justify-content: center;
-	-ms-flex-line-pack: center;
-		align-content: center;
-	-ms-flex-direction: column;
-		flex-direction: column;
-}
-
-.front-latest-product-2a span {
+.front-latest-product-1 span {
 	color: #777;
+	display: block;
+	margin-bottom: 1rem;
+	text-align: center;
 	font-size: 1rem;
 }
 
-.front-latest-product-2a h3 {
-	text-align: justify;
-	font-size: 1.6rem;
+@media screen and  (min-width: 720px) {
+	.front-latest-product-1 span {
+		display: none;
+	}
 }
 
-.front-latest-product-2a p {
-	text-align: justify;
+.front-latest-product-1 h3 {
+	text-align: center;
+	margin: 1rem 0 0.5rem 0;
+	font-size: 1.5rem;
+	display: block;
+}
+
+@media screen and  (min-width: 720px) {
+	.front-latest-product-1 h3 {
+		display: none;
+	}
+}
+
+.front-latest-product-1 img {
+	width: 100%;
+}
+
+.front-latest-product-2 {
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+@media screen and (min-width: 720px) {
+	.front-latest-product-2 {
+		padding: 0px 0px 0px 15px;
+	}
+}
+
+.front-latest-product-2 span {
+	color: #777;
+	display: none;
+	margin-bottom: 1rem;
 	font-size: 1rem;
 }
 
-.front-latest-product-2a a.front-latest-product-btn,
-.front-latest-product-2a a.front-latest-product-btn:active,
-.front-latest-product-2a a.front-latest-product-btn:focus,
-.front-latest-product-2a a.front-latest-product-btn:active:focus {
-	background-color: hsla(300, 2%, 10%, 1);
-	color: #fff;
-	border: 0;
-	border-radius: 0px;
-	padding: 10px;
-	outline: none;
-	font-size: 1rem;
-	transition: background-color ease-out 0.3s;
+@media screen and (min-width: 720px) {
+	.front-latest-product-2 span {
+		display: block
+	}
 }
 
-.front-latest-product-2a a.front-latest-product-btn:hover,
-.front-latest-product-2a a.front-latest-product-btn:hover:active,
-.front-latest-product-2a a.front-latest-product-btn:hover:focus,
-.front-latest-product-2a a.front-latest-product-btn:hover:active:focus {
-	background-color: hsla(300, 2%, 20%, 1);
-	color: #fff;
-	border: 0;
-	border-radius: 0px;
-	padding: 10px;
-	outline: none;
-	font-size: 1rem;
-}
-
-@media screen and (min-width: 1440px){
-
-	.front-latest-product-2a span {
+@media screen and (min-width: 1366px) {
+	.front-latest-product-2 span {
+		margin-bottom: 1.2rem;
 		font-size: 1.2rem;
 	}
+}
 
-	.front-latest-product-2a h3 {
+@media screen and (min-width: 1920px) {
+	.front-latest-product-2 span {
 		font-size: 1.8rem;
 	}
-
-	.front-latest-product-2a p {
-		font-size: 1.2rem;
-	}
-
-	.front-latest-product-2a a.front-latest-product-btn,
-	.front-latest-product-2a a.front-latest-product-btn:active,
-	.front-latest-product-2a a.front-latest-product-btn:focus,
-	.front-latest-product-2a a.front-latest-product-btn:active:focus {
-		font-size: 1.2rem;
-	}
-
-	.front-latest-product-2a a.front-latest-product-btn:hover,
-	.front-latest-product-2a a.front-latest-product-btn:hover:active,
-	.front-latest-product-2a a.front-latest-product-btn:hover:focus,
-	.front-latest-product-2a a.front-latest-product-btn:hover:active:focus {
-		font-size: 1.2rem;
-	}
-
 }
 
-@media screen and (min-width: 1920px){
-
-	.front-latest-product-2a span {
-		font-size: 1.4rem;
-	}
-
-	.front-latest-product-2a h3 {
-		font-size: 2rem;
-	}
-
-	.front-latest-product-2a p {
-		font-size: 1.4rem;
-	}
-
-	.front-latest-product-2a a.front-latest-product-btn,
-	.front-latest-product-2a a.front-latest-product-btn:active,
-	.front-latest-product-2a a.front-latest-product-btn:focus,
-	.front-latest-product-2a a.front-latest-product-btn:active:focus {
-		font-size: 1.4rem;
-	}
-
-	.front-latest-product-2a a.front-latest-product-btn:hover,
-	.front-latest-product-2a a.front-latest-product-btn:hover:active,
-	.front-latest-product-2a a.front-latest-product-btn:hover:focus,
-	.front-latest-product-2a a.front-latest-product-btn:hover:active:focus {
-		font-size: 1.4rem;
-	}
-
+.front-latest-product-2 h3 {
+	margin: 1rem 0 0.5rem 0;
+	font-size: 1.5rem;
+	display: none;
 }
+
+@media screen and (min-width: 720px) {
+	.front-latest-product-2 h3 {
+		display: block
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.front-latest-product-2 h3 {
+		margin: 1.5rem 0 1rem 0;
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.front-latest-product-2 h3 {
+	    font-size: 2.5rem;
+	}
+}
+
+.front-latest-product-2 p {
+	text-align: justify;
+	font-size: 0.9rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1366px) {
+	.front-latest-product-2 p {
+		font-size: 1.1rem;
+		margin-top: 1.2rem;
+		margin-bottom: 1.2rem;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.front-latest-product-2 p {
+		font-size: 1.5rem;
+	}
+}
+
+.front-latest-product-2 .sb-btn-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: #e5e5e5;
+}
+
+@media screen and (min-width: 720px) {
+	.front-latest-product-2 .sb-btn-center {
+		margin-left: 0;
+		margin-right: 0;
+		display: inline-block;
+	}
+}
+
+/* End latest product */
 
 /*--------------------------------------------------------------
 # Shop Page
